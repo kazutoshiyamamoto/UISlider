@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // 花のプロパティ宣言
+    @IBOutlet weak var flower: UIImageView!
+    
+    // スライダの変化で呼び出すメソッド
+    @IBAction func changeSlider(_ sender: UISlider) {
+        // アルファ値をスライダ値で設定する
+        flower.alpha = CGFloat(sender.value)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
